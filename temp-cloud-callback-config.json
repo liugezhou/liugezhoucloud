@@ -1,0 +1,10 @@
+{
+  "enable" :true,
+  "callbacks": [
+    {
+      "msgType" :1,
+      "env" :"liugezhou-test",
+      "functionName":"login"
+    }
+  ]
+}

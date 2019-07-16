@@ -6,12 +6,12 @@
 		"es6": true,
 		"postcss": true,
 		"minified": true,
-    "checkSiteMap": false,
+		"checkSiteMap": false,
 		"newFeature": true
 	},
 	"appid": "wx9b54b9e291e2a9dc",
-	"projectname": "liugezhoucloud",
-	"libVersion": "2.2.5",
+	"projectname": "liugezhou",
+	"libVersion": "2.7.1",
 	"simulatorType": "wechat",
 	"simulatorPluginLibVersion": {},
 	"condition": {
