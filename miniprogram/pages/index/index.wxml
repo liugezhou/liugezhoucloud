@@ -7,7 +7,7 @@
     <view class='cuIcon-cu-image'>
       <image src="/images/tabbar/basics{{PageCur=='basics'?'_cur':''}}.png"></image>
     </view>
-    <view class="{{PageCur=='basics'?'text-green':'text-gray'}}">阅读</view>
+    <view class="{{PageCur=='basics'?'text-green':'text-gray'}}">Reading</view>
   </view>
   <view class="action" bindtap="NavChange" data-cur="component">
     <view class='cuIcon-cu-image'>
@@ -19,6 +19,6 @@
     <view class='cuIcon-cu-image'>
       <image src="/images/tabbar/about{{PageCur=='about'?'_cur':''}}.png"></image>
     </view>
-    <view class="{{PageCur=='about'?'text-green':'text-gray'}}">工具</view>
+    <view class="{{PageCur=='about'?'text-green':'text-gray'}}">Tool</view>
   </view>
 </view>
