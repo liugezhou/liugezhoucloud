@@ -74,99 +74,15 @@ margin-bottom: 50rpx;
 .margin-top-xl {
 margin-top: 50rpx;
 }
-.text-orange, .line-orange, .lines-orange {
-color: orange;
-}
+
 .cu-list.menu>.cu-item {
 	position: relative;
 	display: flex;
 	padding: 0 30rpx;
 	min-height: 100rpx;
-	background-color: var(--white);
+	background-color: white;
 	justify-content: space-between;
 	align-items: center
-}
-
-.cu-list.menu>.cu-item:last-child:after {
-	border: none
-}
-
-.cu-list.menu>.cu-item:after {
-	position: absolute;
-	top: 0;
-	left: 0;
-	box-sizing: border-box;
-	width: 200%;
-	height: 200%;
-	border-bottom: 1rpx solid #ddd;
-	border-radius: inherit;
-	content: " ";
-	transform: scale(.5);
-	transform-origin: 0 0;
-	pointer-events: none
-}
-
-.cu-list.menu>.cu-item.grayscale {
-	background-color: #f5f5f5
-}
-
-.cu-list.menu>.cu-item.cur {
-	background-color: #fcf7e9
-}
-
-.cu-list.menu>.cu-item.arrow {
-	padding-right: 90rpx
-}
-
-.cu-list.menu>.cu-item.arrow:before {
-	position: absolute;
-	top: 0;
-	right: 30rpx;
-	bottom: 0;
-	display: block;
-	margin: auto;
-	width: 30rpx;
-	height: 30rpx;
-	color: var(--grey);
-	content: "\e6a3";
-	text-align: center;
-	font-size: 34rpx;
-	font-family: "cuIcon";
-	line-height: 30rpx
-}
-
-.cu-list.menu>.cu-item button.content {
-	padding: 0;
-	background-color: transparent;
-	justify-content: flex-start
-}
-
-.cu-list.menu>.cu-item button.content:after {
-	display: none
-}
-
-.cu-list.menu>.cu-item .cu-avatar-group .cu-avatar {
-	border-color: var(--white)
-}
-
-.cu-list.menu>.cu-item .content>view:first-child {
-	display: flex;
-	align-items: center
-}
-
-.cu-list.menu>.cu-item .content>text[class*=cuIcon] {
-	display: inline-block;
-	margin-right: 10rpx;
-	width: 1.6em;
-	text-align: center
-}
-
-.cu-list.menu>.cu-item .content>image {
-	display: inline-block;
-	margin-right: 10rpx;
-	width: 1.6em;
-	height: 1.6em;
-	vertical-align: middle
 }
 
 .cu-list.menu>.cu-item .content {
@@ -175,19 +91,19 @@ color: orange;
 	flex: 1
 }
 
-.cu-list.menu>.cu-item .content .cu-tag.sm {
-	display: inline-block;
-	margin-left: 10rpx;
-	height: 28rpx;
-	font-size: 16rpx;
-	line-height: 32rpx
-}
 
-.cu-list.menu>.cu-item .action .cu-tag:empty {
-	right: 10rpx
+.text-orange{
+color: orange;
 }
-.cuIcon-github:before {
-	content: "\e692";
+.text-grey{
+  color:grey;
 }
-
-
+.text-red{
+  color:red;
+}
+.text-green{
+  color:green;
+}
+.text-blue{
+  color:blue;
+}

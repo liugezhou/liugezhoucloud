@@ -32,15 +32,34 @@
   mix-blend-mode: screen;  
   height: 100rpx;   
 }
+.cu-list.menu>.cu-item:after {
+position: absolute;
+top: 0;
+left: 0;
+box-sizing: border-box;
+width: 200%;
+height: 200%;
+border-bottom: 1rpx solid #ddd;
+border-radius: inherit;
+content: " ";
+transform: scale(.5);
+transform-origin: 0 0;
+pointer-events: none;
 
-map,.mapBox{
-  left: 0;
-  z-index: 99;
-  mix-blend-mode: screen;  
-  height: 100rpx;   
 }
-
-map,.mapBox{
-  width: 750rpx;
-  height: 300rpx;
+.cu-list.menu>.cu-item.arrow:before {
+position: absolute;
+top: 0;
+right: 30rpx;
+bottom: 0;
+display: block;
+margin: auto;
+width: 30rpx;
+height: 30rpx;
+color: grey;
+content: "\e7eb";
+text-align: center;
+font-size: 34rpx;
+font-family: "iconfont";
+line-height: 30rpx;
 }
