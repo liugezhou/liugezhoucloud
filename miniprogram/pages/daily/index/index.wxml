@@ -1,0 +1,6 @@
+<scroll-view scroll-y class="dailyPage" >
+   <image src='/images/dailybg.jpg' mode='widthFix' class='dailytop'></image> 
+
+
+  <view class='cu-tabbar-height'></view>
+</scroll-view>

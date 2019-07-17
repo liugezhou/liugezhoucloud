@@ -1,24 +1,24 @@
-<basics wx:if="{{PageCur=='basics'}}"></basics>
-<component wx:if="{{PageCur=='component'}}"></component>
-<about wx:if="{{PageCur=='about'}}"></about>
+<reading wx:if="{{PageCur=='reading'}}"></reading>
+<daily wx:if="{{PageCur=='daily'}}"></daily>
+<tool wx:if="{{PageCur=='tool'}}"></tool>
 
 <view class="cu-bar tabbar bg-white  foot">
-  <view class="action" bindtap="NavChange" data-cur="basics">
+  <view class="action" bindtap="NavChange" data-cur="reading">
     <view class='cuIcon-cu-image'>
-      <image src="/images/tabbar/basics{{PageCur=='basics'?'_cur':''}}.png"></image>
+      <image src="/images/tabbar/reading{{PageCur=='reading'?'_cur':''}}.png"></image>
     </view>
-    <view class="{{PageCur=='basics'?'text-green':'text-gray'}}">Reading</view>
+    <view class="{{PageCur=='reading'?'text-green':'text-gray'}}">Reading</view>
   </view>
-  <view class="action" bindtap="NavChange" data-cur="component">
+  <view class="action" bindtap="NavChange" data-cur="daily">
     <view class='cuIcon-cu-image'>
-      <image src="/images/tabbar/component{{PageCur=='component'?'_cur':''}}.png"></image>
+      <image src="/images/tabbar/daily{{PageCur=='daily'?'_cur':''}}.png"></image>
     </view>
-    <view class="{{PageCur=='component'?'text-green':'text-gray'}}">Daily</view>
+    <view class="{{PageCur=='daily'?'text-green':'text-gray'}}">Daily</view>
   </view>
-  <view class="action" bindtap="NavChange" data-cur="about">
+  <view class="action" bindtap="NavChange" data-cur="tool">
     <view class='cuIcon-cu-image'>
-      <image src="/images/tabbar/about{{PageCur=='about'?'_cur':''}}.png"></image>
+      <image src="/images/tabbar/tool{{PageCur=='tool'?'_cur':''}}.png"></image>
     </view>
-    <view class="{{PageCur=='about'?'text-green':'text-gray'}}">Tool</view>
+    <view class="{{PageCur=='tool'?'text-green':'text-gray'}}">Tool</view>
   </view>
 </view>

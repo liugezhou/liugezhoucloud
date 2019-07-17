@@ -1,7 +1,7 @@
 {
   "usingComponents": {
-    "basics": "/pages/basics/home/home",
-    "component": "/pages/component/home/home",
-    "about": "/pages/about/home/home"
+    "reading": "/pages/reading/index/index",
+    "daily": "/pages/daily/index/index",
+    "tool": "/pages/tool/index/index"
   }
 }

@@ -41,18 +41,7 @@
 	height: 50rpx;
 	display: inline-block;
 }
-.scrollPage {
-  height: 100vh;
-}
-.response {
-	width: 100%;
-}
-image {
-max-width: 100%;
-display: inline-block;
-position: relative;
-z-index: 0;
-}
+
 .cu-tabbar-height {
 	min-height: 100rpx;
 	height: calc(100rpx + env(safe-area-inset-bottom) / 2);

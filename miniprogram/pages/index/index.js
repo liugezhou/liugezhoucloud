@@ -1,6 +1,6 @@
 Page({
   data: {
-    PageCur: 'about'
+    PageCur: 'daily'
   },
   NavChange(e) {
     this.setData({

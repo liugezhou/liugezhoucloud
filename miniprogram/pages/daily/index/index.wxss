@@ -1,0 +1,6 @@
+.dailyPage{
+  height: 100vh;
+}
+.dailytop {
+	width: 100%;
+}

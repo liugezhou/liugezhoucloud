@@ -1,9 +1,6 @@
 {
   "pages": [
-    "pages/index/index",
-    "pages/basics/home/home",
-    "pages/about/home/home"
-    
+    "pages/index/index"
   ],
   "window": {
     "navigationBarBackgroundColor": "#39b54a",
