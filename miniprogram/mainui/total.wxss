@@ -1,3 +1,13 @@
+
+.cu-bar.fixed, .nav.fixed {
+position: fixed;
+width: 100%;
+top: 0;
+z-index: 1024;
+box-shadow: 0 1rpx 6rpx rgba(0, 0, 0, 0.1);
+}
+
+
 .cu-bar {
 	display: flex;
 	position: relative;
@@ -40,6 +50,9 @@
 	width: 50rpx;
 	height: 50rpx;
 	display: inline-block;
+}
+view, scroll-view, swiper, button, input, textarea, label, navigator, image {
+box-sizing: border-box;
 }
 
 .cu-tabbar-height {

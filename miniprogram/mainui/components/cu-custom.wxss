@@ -1,1 +1,49 @@
-/* colorui/components/cu-custom.wxss */
+.cu-custom .cu-bar {
+min-height: 0px;
+padding-right: 220rpx;
+box-shadow: 0rpx 0rpx 0rpx;
+z-index: 9999;
+}
+.cu-custom .cu-bar .content image {
+height: 60rpx;
+width: 240rpx;
+}
+.cu-custom {
+	display: block;
+	position: relative;
+}
+.text-white,
+.line-white,
+.lines-white {
+	color: white;
+}
+.bg-img {
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+}
+.cu-custom .cu-bar .content {
+width: calc(100% - 440rpx);
+}
+.cu-bar .content {
+position: absolute;
+text-align: center;
+width: calc(100% - 340rpx);
+left: 0;
+right: 0;
+bottom: 0;
+top: 0;
+margin: auto;
+height: 60rpx;
+font-size: 32rpx;
+line-height: 60rpx;
+cursor: none;
+pointer-events: none;
+text-overflow: ellipsis;
+white-space: nowrap;
+overflow: hidden;
+}
+.text-color{
+color:#14be2b;
+}
+

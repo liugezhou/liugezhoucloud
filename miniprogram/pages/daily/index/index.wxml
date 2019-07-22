@@ -1,6 +1,28 @@
-<scroll-view scroll-y class="dailyPage" >
-   <image src='/images/dailybg.jpg' mode='widthFix' class='dailytop'></image> 
+<scroll-view scroll-y class="dailyPage">
+  <cu-custom >
+    <view slot="content">
+      One Sentence
+    </view>
+  </cu-custom>
+  <view class="dailymain">
 
+<swiper 
+  autoplay="{{false}}" >
+  <block wx:for="{{englishword}}" wx:key="{{index}}">
+    <swiper-item>
+       <view class="wordscontent"  bindtap="viewchia">
+          <text wx:if="{{engl}}"> {{item.english}}</text>
+          <text wx:if="{{!engl}}">{{item.chiness}}</text>
+        <view class="dailyriqi">
+          <text>{{item.time}}</text>
+        </view>
+      </view>
+    </swiper-item>
+  </block>
+</swiper>
 
-  <view class='cu-tabbar-height'></view>
+     
+
+  </view>
 </scroll-view>
+   

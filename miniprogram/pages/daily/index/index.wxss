@@ -1,6 +1,32 @@
 .dailyPage{
   height: 100vh;
+  background: url(http://img.liugezhou.online/190722explore.jpg) no-repeat;
+  background-size: cover
 }
-.dailytop {
-	width: 100%;
+
+.dailymain{
+  height:80vh;
+  width:100%;  
+}
+.wordscontent{
+  background: -webkit-linear-gradient( top, rgba(187, 206, 209, 0.767), rgba(187, 206, 209, 0.767));
+  line-height: 60rpx;
+  text-align: center;
+  color:rgb(128, 14, 194);
+  padding-top:30rpx;
+  height:450rpx;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.dailyriqi{
+  text-align: right;
+  position: relative;
+  bottom:-30rpx;
+  right:30rpx;
+  color:gray;
+  font-size:26rpx;
+}
+swiper{
+  height:100%;
 }

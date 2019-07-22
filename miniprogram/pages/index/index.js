@@ -1,3 +1,5 @@
+const db = wx.cloud.database()
+const user = db.collection('user')
 Page({
   data: {
     PageCur: 'daily'
