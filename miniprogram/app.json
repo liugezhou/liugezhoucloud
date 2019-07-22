@@ -1,6 +1,10 @@
 {
   "pages": [
-    "pages/index/index"
+    "pages/index/index",
+    "pages/reading/article/index",
+    "pages/tool/littletool/index",
+    "pages/tool/recommend/index",
+    "pages/tool/thank/index"
   ],
   "window": {
     "navigationBarBackgroundColor": "#39b54a",

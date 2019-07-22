@@ -2,7 +2,7 @@
 	"miniprogramRoot": "miniprogram/",
 	"cloudfunctionRoot": "cloudfunctions/",
 	"setting": {
-		"urlCheck": false,
+		"urlCheck": true,
 		"es6": true,
 		"enhance": true,
 		"postcss": true,
@@ -10,6 +10,7 @@
 		"newFeature": true,
 		"coverView": true,
 		"autoAudits": false,
+		"uglifyFileName": true,
 		"checkInvalidKey": true,
 		"checkSiteMap": false,
 		"uploadWithSourceMap": true,
@@ -17,12 +18,11 @@
 			"ignore": [],
 			"disablePlugins": [],
 			"outputPath": ""
-		},
-		"uglifyFileName": true
+		}
 	},
 	"appid": "wx9b54b9e291e2a9dc",
 	"projectname": "liugezhou",
-	"libVersion": "2.7.1",
+	"libVersion": "2.7.7",
 	"simulatorType": "wechat",
 	"simulatorPluginLibVersion": {},
 	"condition": {
@@ -42,12 +42,27 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 0,
+			"current": 2,
 			"list": [
 				{
 					"id": -1,
 					"name": "db guide",
-					"pathName": "pages/databaseGuide/databaseGuide"
+					"pathName": "pages/databaseGuide/databaseGuide",
+					"query": ""
+				},
+				{
+					"id": 1,
+					"name": "pages/index/index",
+					"pathName": "pages/index/index",
+					"query": "",
+					"scene": 1011
+				},
+				{
+					"id": -1,
+					"name": "小工具",
+					"pathName": "pages/tool/littletool/index",
+					"query": "",
+					"scene": null
 				}
 			]
 		}

@@ -1,0 +1,4 @@
+<cu-custom bgColor="bg-gradual-pink" isBack="{{true}}">
+  <text slot="backText">  返回</text>
+  <view slot="content">推荐</view>
+</cu-custom>

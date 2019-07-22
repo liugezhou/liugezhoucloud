@@ -1,6 +1,6 @@
 Component({
   options: {
-    addGlobalClass: true,
+    addGlobalClass: false,
   },
   data: {
     engl:true,

@@ -109,3 +109,6 @@ color: orange;
 .text-blue{
   color:blue;
 }
+.text-white{
+  color:white;
+}

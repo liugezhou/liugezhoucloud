@@ -4,13 +4,13 @@
   </view>
   <view class="cu-list menu card-menu margin-top-xl margin-bottom-xl shadow-lg radius">
     <view class="cu-item arrow">
-      <navigator class="content" url="/pages/about/about/about" hover-class="none">
+      <navigator class="content" url="/pages/tool/littletool/index" hover-class="none">
         <text class="iconfont icon-sliders text-blue"></text>
         <text class="text-grey"> 小工具</text>
       </navigator>
     </view>
     <view class="cu-item arrow">
-      <navigator class="content" url="/pages/about/log/log" hover-class="none">
+      <navigator class="content" url="/pages/tool/recommend/index" hover-class="none">
          <text class="iconfont icon-select text-green"></text>
         <text class="text-grey">  推荐</text>
       </navigator>
@@ -23,7 +23,7 @@
     </view>
     
     <view class="cu-item arrow">
-      <navigator class="content" url="/pages/about/test/list" hover-class="none">
+      <navigator class="content" url="/pages/tool/thank/index" hover-class="none">
          <text class="iconfont icon-team text-orange"></text>
         <text class="text-grey">  鸣谢</text>
       </navigator>

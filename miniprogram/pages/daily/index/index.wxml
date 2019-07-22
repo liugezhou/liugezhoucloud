@@ -7,7 +7,7 @@
   <view class="dailymain">
 
 <swiper 
-  autoplay="{{false}}" >
+  autoplay="{{true}}" interval="8000">
   <block wx:for="{{englishword}}" wx:key="{{index}}">
     <swiper-item>
        <view class="wordscontent"  bindtap="viewchia">

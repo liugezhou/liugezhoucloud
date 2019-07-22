@@ -43,7 +43,5 @@ text-overflow: ellipsis;
 white-space: nowrap;
 overflow: hidden;
 }
-.text-color{
-color:#14be2b;
-}
+
 

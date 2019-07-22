@@ -9,7 +9,6 @@
   width:100%;  
 }
 .wordscontent{
-  background: -webkit-linear-gradient( top, rgba(187, 206, 209, 0.767), rgba(187, 206, 209, 0.767));
   line-height: 60rpx;
   text-align: center;
   color:rgb(128, 14, 194);

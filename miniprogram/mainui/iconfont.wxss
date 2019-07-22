@@ -1,13 +1,12 @@
 @font-face {
   font-family: 'iconfont';  /* project id 1300424 */
-  src: url('//at.alicdn.com/t/font_1300424_24kggl0r03w.eot');
-  src: url('//at.alicdn.com/t/font_1300424_24kggl0r03w.eot?#iefix') format('embedded-opentype'),
-  url('//at.alicdn.com/t/font_1300424_24kggl0r03w.woff2') format('woff2'),
-  url('//at.alicdn.com/t/font_1300424_24kggl0r03w.woff') format('woff'),
-  url('//at.alicdn.com/t/font_1300424_24kggl0r03w.ttf') format('truetype'),
-  url('//at.alicdn.com/t/font_1300424_24kggl0r03w.svg#iconfont') format('svg');
+  src: url('//at.alicdn.com/t/font_1300424_l3n9ra6onpe.eot');
+  src: url('//at.alicdn.com/t/font_1300424_l3n9ra6onpe.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_1300424_l3n9ra6onpe.woff2') format('woff2'),
+  url('//at.alicdn.com/t/font_1300424_l3n9ra6onpe.woff') format('woff'),
+  url('//at.alicdn.com/t/font_1300424_l3n9ra6onpe.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_1300424_l3n9ra6onpe.svg#iconfont') format('svg');
 }
-
 
 .iconfont {
   font-family: "iconfont" !important;
@@ -15,6 +14,10 @@
   font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-iconfontjiantou7:before {
+  content: "\e637";
 }
 
 .icon-Dollar:before {
