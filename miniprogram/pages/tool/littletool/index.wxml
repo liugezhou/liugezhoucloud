@@ -3,7 +3,6 @@
   <view slot="content">小工具</view>
 </cu-custom>
 <view class="toolcontent">
-
   <view class="toolitem" wx:for="{{toollist}}" wx:key bindtap="tansuo">
       <view>  <image src="{{item.url}}" class="iconimgtool"></image></view> 
       <text class="tooltext">{{item.text}}</text>

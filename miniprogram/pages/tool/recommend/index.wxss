@@ -2,3 +2,23 @@
 	background-image: linear-gradient(45deg, #9000ff, #5e00ff);
 	color: white;
 }
+.toolcontent{
+  padding-top:50rpx;
+  display: flex;
+  justify-content: space-around;
+  text-align: center
+}
+.toolitem{
+  width:30%;
+  display: flex;
+  flex-direction: column;
+}
+.iconimgtool{
+  height:80rpx;
+  width:80rpx;
+}
+.tooltext{
+  color:rgb(156, 144, 144);
+  font-size:28rpx;
+  line-height: 50rpx;
+}

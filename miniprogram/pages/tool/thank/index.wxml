@@ -2,3 +2,9 @@
   <text slot="backText">  返回</text>
   <view slot="content">鸣谢</view>
 </cu-custom>
+<view class="toolcontent">
+  <view class="toolitem" wx:for="{{toollist}}" wx:key bindtap="tansuo">
+      <view>  <image src="{{item.url}}" class="iconimgtool"></image></view> 
+      <text class="tooltext">{{item.text}}</text>
+  </view>
+</view>
