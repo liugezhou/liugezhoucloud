@@ -1,0 +1,50 @@
+.bg-gradual-pink {
+	background-image: linear-gradient(45deg, #a900ec9a, #6739b6);
+	color: white;
+}
+.main{
+  height:500rpx;
+  width:100%;
+}
+
+.canvas{
+	width: 100%;
+	height: 100%;
+}
+.chooseDateContent{
+  margin-top:20rpx;
+}
+.showselfinfo{
+  padding:20rpx 50rpx 50rpx 50rpx;
+}
+.yearold{
+  color:rgb(121, 110, 110);
+   text-align: center;
+}
+.tabletime{
+  margin-top:30rpx;
+  font-size:26rpx;
+  color:rgb(172, 161, 161);
+}
+.tabletimetable{
+  margin-top:30rpx;
+}
+.table{
+  border:1px solid #dadada;
+  border-right: 0;
+  border-bottom: 0;
+  width:98%;
+}
+.tr{
+width: 100%;
+display: flex;
+justify-content: space-between;
+}
+
+.td {
+padding: 10px;
+border-bottom: 1px solid #dadada;
+border-right: 1px solid #dadada;
+text-align: center;
+width:100%
+}

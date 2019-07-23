@@ -45,22 +45,23 @@
 			"current": 2,
 			"list": [
 				{
-					"id": -1,
-					"name": "db guide",
-					"pathName": "pages/databaseGuide/databaseGuide",
-					"query": ""
-				},
-				{
-					"id": 1,
+					"id": 0,
 					"name": "pages/index/index",
 					"pathName": "pages/index/index",
 					"query": "",
-					"scene": 1011
+					"scene": 1047
 				},
 				{
 					"id": -1,
 					"name": "小工具",
 					"pathName": "pages/tool/littletool/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "生辰",
+					"pathName": "pages/tool/littletool/miaobiao/index",
 					"query": "",
 					"scene": null
 				}

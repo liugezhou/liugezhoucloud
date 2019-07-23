@@ -1,0 +1,40 @@
+<cu-custom bgColor="bg-gradual-pink" isBack="{{true}}">
+  <text slot="backText">  返回</text>
+  <view slot="content">生辰</view>
+</cu-custom>
+<view class="main">
+     <canvas canvas-id="myCanvas" class="canvas" bindtap="choosebirth"></canvas>
+</view>
+<view class="chooseDateContent">
+ <view class="showpicker" wx:if="{{showchoosepicker}}">
+  <picker mode="date" value="{{date}}" start="{{startDate}}" end="{{endDate}}" bindchange="bindDateChange">
+    <view class="picker">
+       <button type="primary">{{showdatapicker}}</button>
+    </view>
+  </picker>
+  </view>
+
+  <view class="showselfinfo" wx:if="{{showchoosepicker}}">
+      <view class="yearold">
+           你今年已经 <text style="color:green;font-size:40rpx;">27</text> 岁了。
+           <text class="iconfont icon-icon-trash text-blue"></text>
+      </view>
+      <view class="tabletime">
+        <text>在这个美丽的星球上，你已经存在了:</text>
+        <view class="tabletimetable">
+        <view class="table">
+            <view class="tr">
+                <view class="td">{{yearoldrinfo.year}} 年</view>
+                <view class="td">{{yearoldrinfo.month}} 月</view>
+                <view class="td">{{yearoldrinfo.weeks}}周</view>
+            </view>
+            <view class="tr">
+                <view class="td">{{yearoldrinfo.days}}天</view>
+                <view class="td">{{yearoldrinfo.hours}}小时</view>
+                <view class="td">{{yearoldrinfo.minutes}}分钟</view>
+            </view>
+        </view>
+</view>
+      </view>
+  </view>
+</view>

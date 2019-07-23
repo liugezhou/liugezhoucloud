@@ -4,7 +4,8 @@
     "pages/reading/article/index",
     "pages/tool/littletool/index",
     "pages/tool/recommend/index",
-    "pages/tool/thank/index"
+    "pages/tool/thank/index",
+    "pages/tool/littletool/miaobiao/index"
   ],
   "window": {
     "navigationBarBackgroundColor": "#39b54a",

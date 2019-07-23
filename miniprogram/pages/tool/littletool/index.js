@@ -1,36 +1,40 @@
-// miniprogram/pages/tool/littletool/index.js
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
     toollist:[{
       url:'/images/miaobiao.png',
-      text:"生死钟"
+      text:"生死钟",
+      name:'miaobiao'
     },
     {
       url: '/images/dalishi.png',
-      text: "探索中"
+      text: "探索中",
+      name: 'other'
     },
       {
       url: '/images/lubiao.png',
-        text: "探索中"
+        text: "探索中",
+        name: 'other'
     }]
   },
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
+  
   onLoad: function (options) {
 
   },
-  tansuo:function(){
-    wx.showToast({
-      icon:'none',
-      title: '敬请期待！',
-      duration:2000
-    })
+  tansuo:function(e){
+    const name = e.currentTarget.dataset.index
+    if(Object.is(name,'miaobiao')){
+      wx.navigateTo({
+        url: '/pages/tool/littletool/miaobiao/index',
+      })
+    }else{
+      wx.showToast({
+        icon: 'none',
+        title: '敬请期待！',
+        duration: 2000
+      })
+    }
+    
   },
   /**
    * 生命周期函数--监听页面初次渲染完成
