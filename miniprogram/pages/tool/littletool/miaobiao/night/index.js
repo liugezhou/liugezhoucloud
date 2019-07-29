@@ -1,24 +1,26 @@
 //钟表画图借鉴：https://blog.csdn.net/weixin_36185028/article/details/53856528
-const now = new Date()
+var birthage = 0;
 Page({
   data: {
     width: 0,
     height: 0,
-    startDate:"1900-01-01",
-    endDate:"2100-12-31",
-    showdatapicker:'请选择你的出手日期',
-    showchoosepicker:true,
-    yearoldrinfo:{
-      year:0,
-      month:0,
-      weeks:0,
-      days:0,
+    allage: [10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100,101,102,103,104,105,106,107,108,109,120,121,122,123,124,125],
+    showdatapicker: '选择年龄',
+    showchoosepicker: true,
+    allthings: {
+      eat: 0,
+      drink: 0,
+      love: 0,
+      run: 0,
+      smoke: 0,
+      minutes: 0,
       hours:0,
-      minutes:0
+      time:0
     }
   },
-  
-  onLoad: function () {
+
+  onLoad: function (options) {
+    birthage = options.birthage
     //将全局变量Index保存在that中，里面函数调用
     var that = this
     //获取系统信息
@@ -29,18 +31,19 @@ Page({
         that.height = res.windowHeight
       }
     })
-    var yearoldrinfo =wx.getStorageSync("birthday")
-    if (yearoldrinfo){
+    var allthings = wx.getStorageSync("deadday")
+    if (allthings) {
       that.setData({
-        yearoldrinfo: {
-          year: yearoldrinfo.year,
-          month: yearoldrinfo.month,
-          weeks: yearoldrinfo.weeks,
-          days: yearoldrinfo.days,
-          hours: yearoldrinfo.hours,
-          minutes: yearoldrinfo.minutes
+        allthings: {
+          eat: allthings.eat,
+          drink: allthings.drink,
+          love: allthings.love,
+          run: allthings.run,
+          smoke: allthings.smoke,
+          minutes: allthings.minutes,
+          hours: allthings.hours,
+          time: allthings.time
         },
-        showdatapicker: '重新选择',
         showchoosepicker: !this.data.showchoosepicker
       })
     }
@@ -48,22 +51,22 @@ Page({
   //onReady生命周期函数，监听页面初次渲染完成
   onReady: function () {
     //调用canvasClock函数
-    this.canvasClock()
+     this.canvasClock()
     //对canvasClock函数循环调用
-    this.interval = setInterval(this.canvasClock, 1000)
+     this.interval = setInterval(this.canvasClock, 1000)
   },
   canvasClock: function () {
     var context = wx.createContext()//创建并返回绘图上下文（获取画笔）
     //设置宽高
-    var width = this.width/1.5
-    var height = this.height/1.5
+    var width = this.width / 1.5
+    var height = this.height / 1.5
     //设置文字距离时钟中心点距离
-    var R = width / 3.3 ;
+    var R = width / 3.3;
     //重置画布函数
     function reSet() {
       context.height = context.height;//每次清除画布，然后变化后的时间补上
       //设置坐标轴原点
-      context.translate(width/1.3, height/3.8);
+      context.translate(width / 1.3, height / 3.8);
       context.save();//保存中点坐标1
     }
     //绘制中心圆和外面大圆
@@ -123,8 +126,8 @@ Page({
     function move() {
       var t = new Date();//获取当前时间
       var h = t.getHours();//获取小时
-      h = h > 12 ? (h - 12) : h;//将24小时制转化为12小时制
-      var m = t.getMinutes();//获取分针
+       h = h > 12 ? (h - 12) : h;//将24小时制转化为12小时制
+       var m = t.getMinutes();//获取分针
       var s = t.getSeconds();//获取秒针
       context.save();//再次保存2
       context.setLineWidth(7);
@@ -173,53 +176,46 @@ Page({
     })
   },
   //选择完出生日期后
-  bindDateChange: function(e){
-    // console.log(now)
-    // console.log(e.detail.value)
-    var d1 = new Date(e.detail.value);
-    var d2 = new Date();
-    var birthminus = parseInt(parseInt(d2 - d1) / 1000 / 60)
-    var birthhour = parseInt(parseInt(d2 - d1) / 1000 / 3600)
-    var birthday = parseInt(parseInt(d2 - d1) / 1000 / 3600 / 24)
-    var birthweek = parseInt(parseInt(d2 - d1) / 1000 / 3600 / 24 / 7)
-    var birthmonth = parseInt(parseInt(d2 - d1) / 1000 / 3600 / 24 / 30)
-    var birthyear = parseInt(parseInt(d2 - d1) / 1000 / 3600 / 24 / 365)
-    this.setData({
-      yearoldrinfo:{
-        year: birthyear,
-        month: birthmonth,
-        weeks: birthweek,
-        days: birthday,
-        hours: birthhour,
-        minutes: birthminus
+  bindDateChange: function (e) {
+    const deadage = this.data.allage[e.detail.value]
+    const lifeage = deadage - birthage
+    const hours = parseInt((birthage / deadage) * 24)
+    var time = parseInt((((lifeage / deadage) * 24) % 1) * 60)
+    if (time<10){
+        time = "0"+time
+    }
+    const eat = parseInt(lifeage*365*3)
+    const drink = parseInt(lifeage * 365 * 3)
+    const love = parseInt(lifeage * 365 * 0.2)
+    const run = parseInt(lifeage * 365 * 8000)
+    const smoke = parseInt(lifeage * 365 * 20)
+    const minutes = parseInt(lifeage * 365 * 0.3)
+    this.setData({  
+      allthings: {
+        eat: eat,
+        drink: drink,
+        love: love,
+        run: run,
+        smoke: smoke,
+        minutes: minutes,
+        hours: hours,
+        time:time
       },
-      showdatapicker:'重新选择',
       showchoosepicker: !this.data.showchoosepicker
     })
-    wx.setStorageSync("birthday", this.data.yearoldrinfo)
+    wx.setStorageSync("deadday", this.data.allthings)
   },
-  resetchoose: function(){
+  resetchoose: function () {
     this.setData({
       showchoosepicker: !this.data.showchoosepicker
-    })
-    wx.removeStorage({
-      key: 'birthday'
     })
     wx.removeStorage({
       key: 'deadday'
     })
   },
-  deadButtonurl:function(e){
-    const birthage = parseInt(e.currentTarget.dataset.birthage)
-    wx.navigateTo({
-      url: '/pages/tool/littletool/miaobiao/night/index?birthage=' + birthage,
-    })
-  },
+ 
   //页面卸载，清除画布绘制计时器
   onUnload: function () {
-    clearInterval(this.interval)
-  },
-  onHide: function () {
     clearInterval(this.interval)
   }
 })

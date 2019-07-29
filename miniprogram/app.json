@@ -5,7 +5,8 @@
     "pages/tool/littletool/index",
     "pages/tool/recommend/index",
     "pages/tool/thank/index",
-    "pages/tool/littletool/miaobiao/index"
+    "pages/tool/littletool/miaobiao/index",
+    "pages/tool/littletool/miaobiao/night/index"
   ],
   "window": {
     "navigationBarBackgroundColor": "#39b54a",

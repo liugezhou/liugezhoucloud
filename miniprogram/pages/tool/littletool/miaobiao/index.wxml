@@ -7,17 +7,18 @@
 </view>
 <view class="chooseDateContent">
  <view class="showpicker" wx:if="{{showchoosepicker}}">
-  <picker mode="date" value="{{date}}" start="{{startDate}}" end="{{endDate}}" bindchange="bindDateChange">
-    <view class="picker">
-       <button type="primary">{{showdatapicker}}</button>
-    </view>
-  </picker>
-  </view>
+    <picker mode="date" value="{{date}}" start="{{startDate}}" end="{{endDate}}" bindchange="bindDateChange">
+      <view class="picker">
+        <!-- <a href="#" class="myButton">{{showdatapicker}}</a> -->
+        <button type="primary" class="myButton">{{showdatapicker}}</button>
+      </view>
+    </picker>
+ </view>
 
-  <view class="showselfinfo" wx:if="{{showchoosepicker}}">
+  <view class="showselfinfo" wx:if="{{!showchoosepicker}}">
       <view class="yearold">
-           你今年已经 <text style="color:green;font-size:40rpx;">27</text> 岁了。
-           <text class="iconfont icon-icon-trash text-blue"></text>
+           你今年已经 <text style="color:green;font-size:40rpx;">{{yearoldrinfo.year}}</text> 岁了。
+           <text class="iconfont icon-icon-trash text-blue" style="font-size:50rpx" bindtap="resetchoose"></text>
       </view>
       <view class="tabletime">
         <text>在这个美丽的星球上，你已经存在了:</text>
@@ -34,6 +35,9 @@
                 <view class="td">{{yearoldrinfo.minutes}}分钟</view>
             </view>
         </view>
+        <view class="ma_t30" >
+         <button  class="deadButton" bindtap="deadButtonurl" data-birthage="{{yearoldrinfo.year}}">终之钟</button>
+         </view>
 </view>
       </view>
   </view>

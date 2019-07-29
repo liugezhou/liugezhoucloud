@@ -9,12 +9,12 @@
         <text class="text-grey"> 小工具</text>
       </navigator>
     </view>
-    <view class="cu-item arrow">
+    <!-- <view class="cu-item arrow">
       <navigator class="content" url="/pages/tool/recommend/index" hover-class="none">
          <text class="iconfont icon-select text-green"></text>
         <text class="text-grey">  推荐</text>
       </navigator>
-    </view>
+    </view> -->
     <view class="cu-item arrow">
       <view class="content" bindtap="showQrcode">
         <text class="iconfont icon-Dollar text-red"></text>
@@ -22,12 +22,12 @@
       </view>
     </view>
     
-    <view class="cu-item arrow">
+    <!-- <view class="cu-item arrow">
       <navigator class="content" url="/pages/tool/thank/index" hover-class="none">
          <text class="iconfont icon-team text-orange"></text>
         <text class="text-grey">  鸣谢</text>
       </navigator>
-    </view>
+    </view> -->
   </view>
   <view class="cu-tabbar-height"></view>
 </scroll-view>

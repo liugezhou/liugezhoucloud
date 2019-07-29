@@ -5,16 +5,17 @@ Page({
       text:"生死钟",
       name:'miaobiao'
     },
-    {
-      url: '/images/dalishi.png',
-      text: "探索中",
-      name: 'other'
-    },
-      {
-      url: '/images/lubiao.png',
-        text: "探索中",
-        name: 'other'
-    }]
+    // {
+    //   url: '/images/dalishi.png',
+    //   text: "探索中",
+    //   name: 'other'
+    // },
+    //   {
+    //   url: '/images/lubiao.png',
+    //     text: "探索中",
+    //     name: 'other'
+    // }
+    ]
   },
 
   

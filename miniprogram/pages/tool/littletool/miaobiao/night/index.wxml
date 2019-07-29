@@ -1,0 +1,46 @@
+<view class="deadbg">
+<cu-custom bgColor="bg-gradual-pink" isBack="{{true}}">
+  <text slot="backText">  返回</text>
+  <view slot="content">终</view>
+</cu-custom>
+<view class="main">
+     <canvas canvas-id="myCanvas" class="canvas" bindtap="choosebirth"></canvas>
+</view>
+<view class="chooseDateContent">
+ <view class="showpicker" wx:if="{{showchoosepicker}}">
+    <view class="guessage">你猜测自己能活多少岁</view>
+    <picker mode="selector" value="{{10}}" range="{{allage}}" bindchange="bindDateChange">
+      <view class="picker">
+        <button type="primary" class="myButton">{{showdatapicker}}</button>
+      </view>
+    </picker>
+ </view>
+
+  <view class="showselfinfo" wx:if="{{!showchoosepicker}}">
+      <view class="yearold">
+           这是你一生中的 
+           <text style="color:pink;font-size:35rpx;">{{allthings.hours}}时{{allthings.time}}分  </text>  . 
+           <text class="iconfont icon-icon-trash text-white" bindtap="resetchoose"></text>
+      </view>
+      <view class="tabletime">
+        <text>在接下来的日子里你还可以:</text>
+        <view class="tabletimetable">
+        <view class="table">
+            <view class="tr">
+                <view class="td">吃{{allthings.eat}} 顿饭</view>
+                <view class="td">喝{{allthings.drink}} 杯水</view>
+            </view>
+            <view class="tr">
+                <view class="td">睡{{allthings.minutes}}天</view>
+                <view class="td">做{{allthings.love}}次爱</view>
+            </view>
+            <view class="tr">
+               <view class="td">走{{allthings.run}}步</view>
+               <view class="td">抽{{allthings.smoke}}根烟</view>
+            </view>
+        </view>
+</view>
+      </view>
+  </view>
+</view>
+</view>

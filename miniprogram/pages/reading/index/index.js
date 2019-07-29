@@ -7,27 +7,27 @@ Component({
     StatusBar: app.globalData.StatusBar,
     CustomBar: app.globalData.CustomBar,
     list: [{
-      title: '每周分享第五期',
+      title: '六个周的个人博客',
       img: 'http://img.liugezhou.online/20190722lake.jpg',
-      url: 'https://mp.weixin.qq.com/s/O7hg0-kQdNdBMXM3Ki-rAw'
+      url: 'https://www.liugezhou.online'
     },
     {
-      title: '每周分享第四期',
+      title: 'CSS',
       img: 'http://img.liugezhou.online/20190722hu.jpg',
       url: 'https://mp.weixin.qq.com/s/bGICPk0fpr0EXhdeI3JRXA'
     },
     {
-      title: '每周分享第三期',
+      title: 'JavaScript',
       img: 'http://img.liugezhou.online/20190722moutain.jpg',
       url: 'https://mp.weixin.qq.com/s/toOGs-ZTPXgMU9QiungGSQ'
     },
     {
-      title: '每周分享第二期',
+      title: 'Vue.js',
       img: 'http://img.liugezhou.online/20190722water.jpg',
       url: 'https://mp.weixin.qq.com/s/reL_seHSHROehTXV2aYA-g'
     },
       {
-        title: '每周分享第一期',
+        title: 'Node.js',
         img: 'http://img.liugezhou.online/20190722night.jpg',
         url: 'https://mp.weixin.qq.com/s/a-hZTLAKMR9E-m6utzhG0A'
       }
@@ -35,9 +35,20 @@ Component({
   },
   methods: {
     toChild(e) {
-      wx.navigateTo({
-        url: '/pages/reading/article/index?url=' + e.currentTarget.dataset.url
-      })
+      if (e.currentTarget.dataset.url =="https://www.liugezhou.online"){
+          wx.showModal({
+            title: '六个周的博客地址',
+            content: 'https://www.liugezhou.online',
+            showCancel:false
+          })
+      }else{
+        wx.showToast({
+          icon: 'none',
+          title: '这个模块在思考中……',
+          duration: 2000
+        })
+      }
+      
     },
   }
 })
