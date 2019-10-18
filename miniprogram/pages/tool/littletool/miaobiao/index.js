@@ -1,5 +1,6 @@
 //钟表画图借鉴：https://blog.csdn.net/weixin_36185028/article/details/53856528
 const now = new Date()
+const app = getApp()
 Page({
   data: {
     width: 0,
@@ -19,6 +20,7 @@ Page({
   },
   
   onLoad: function () {
+		console.log(getCurrentPages())
     //将全局变量Index保存在that中，里面函数调用
     var that = this
     //获取系统信息
@@ -174,10 +176,20 @@ Page({
   },
   //选择完出生日期后
   bindDateChange: function(e){
-    // console.log(now)
-    // console.log(e.detail.value)
     var d1 = new Date(e.detail.value);
     var d2 = new Date();
+		//将出生日期更新至数据库中
+		const db = wx.cloud.database()
+		db.collection('userbaseinfo').where({
+			_openid: app.globalData.openid
+		}).get().then( res=> {
+			console.log(res.data)
+			db.collection('userbaseinfo').doc(res.data[0]._id).update({
+				data:{
+					birth:d1
+				}
+			})
+		})
     var birthminus = parseInt(parseInt(d2 - d1) / 1000 / 60)
     var birthhour = parseInt(parseInt(d2 - d1) / 1000 / 3600)
     var birthday = parseInt(parseInt(d2 - d1) / 1000 / 3600 / 24)

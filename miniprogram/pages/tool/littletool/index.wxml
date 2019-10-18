@@ -4,9 +4,12 @@
 </cu-custom>
 <view class="toolcontent">
   <view class="toolitem" wx:for="{{toollist}}" wx:key >
-    <view bindtap="tansuo" data-index="{{item.name}}">
+    <button data-index="{{item.name}}" open-type="getUserInfo" bindgetuserinfo="tansuo" class="overwrite">
         <view><image src="{{item.url}}" class="iconimgtool"></image></view> 
         <text class="tooltext">{{item.text}}</text>
-      </view>
+      </button>
   </view>
+</view>
+<view bindtap="test">
+back
 </view>

@@ -9,7 +9,6 @@
  <view class="showpicker" wx:if="{{showchoosepicker}}">
     <picker mode="date" value="{{date}}" start="{{startDate}}" end="{{endDate}}" bindchange="bindDateChange">
       <view class="picker">
-        <!-- <a href="#" class="myButton">{{showdatapicker}}</a> -->
         <button type="primary" class="myButton">{{showdatapicker}}</button>
       </view>
     </picker>

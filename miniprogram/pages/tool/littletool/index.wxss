@@ -20,5 +20,11 @@
 .tooltext{
   color:rgb(156, 144, 144);
   font-size:28rpx;
-  line-height: 50rpx;
+}
+.overwrite{
+	color:white;
+	background-color: white;
+}
+.overwrite::after{
+	border: 1px solid white;
 }

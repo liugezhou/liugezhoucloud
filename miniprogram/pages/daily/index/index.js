@@ -7,14 +7,11 @@ Component({
     englishword: []
   },
 	created: function(options) {
-		wx.cloud.callFunction({
-			name: 'queryenglish',
-			data: {},
-			success: res => {
-				this.setData({
-					englishword:res.result.data.reverse()
-				})
-			}
+		const db = wx.cloud.database()
+		db.collection('englishday').orderBy('month','desc').get().then(res =>{
+			this.setData({
+				englishword: res.data
+			})
 		})
   },
   methods: {
